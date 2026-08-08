@@ -1,0 +1,56 @@
+{
+  "source": "FSS fss_dialogues.json",
+  "n_conversations_total": 170,
+  "n_usable(>=2turns)": 142,
+  "turns_per_conversation": {
+    "min": 3,
+    "p25": 13,
+    "median": 19,
+    "mean": 22.8,
+    "p75": 28,
+    "max": 146
+  },
+  "attacker_turns_per_conv": {
+    "median": 10,
+    "mean": 12.5
+  },
+  "victim_turns_per_conv": {
+    "median": 8,
+    "mean": 10.4
+  },
+  "chars_per_turn": {
+    "attacker": {
+      "median": 39,
+      "mean": 60.3
+    },
+    "victim": {
+      "median": 4,
+      "mean": 10.3
+    }
+  },
+  "attacker_vs_victim_char_ratio": 7.04,
+  "chars_per_conversation": {
+    "median": 757,
+    "mean": 860.2
+  },
+  "persuasion_technique_signal_freq": {
+    "고립": 441,
+    "긴급성": 399,
+    "공포": 290,
+    "권위": 88,
+    "사회적증거": 46,
+    "순응유도": 24,
+    "신뢰형성": 15
+  },
+  "attacker_opening_org_freq": {
+    "은행": 18,
+    "수사관": 16,
+    "지검": 12,
+    "검찰": 12,
+    "검사": 3,
+    "법원": 2,
+    "금감원": 2,
+    "금융감독원": 2,
+    "경찰": 1
+  }
+}

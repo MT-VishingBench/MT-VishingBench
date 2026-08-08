@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv-tx/
+*.egg-info/
+
+# 가상환경 (위치 무관)
+**/.venv/
+**/.venv-tx/
+
+# 대용량 원본(영상/오디오)만 제외 — 코드로 재생성 가능
+**/data/videos/
+**/data/audio/
+*.mp4
+*.wav
+*.part
+
+# 모델/캐시
+*.mlx
+.cache/
+
+# OS
+.DS_Store
+
+# 텍스트 데이터(전사/라벨/본문대화)는 커밋함 (FSS 공개자료, KOGL 가정)
+# data/transcripts/, data/transcripts_labeled/, data/dialogues/ 포함
+
+# 백업 폴더
+**/*_bak/
+
+# 중간 산출물(개별 대화/전사 txt) — 통합본 data/fss_dialogues.json 에 포함되어 있어 git에선 제외
+**/data/transcripts/
+**/data/dialogues/*.txt
+**/data/stt_dialogues/
+
+# 합성 대화 개별 파일 — 통합본 synth_dialogues.json 에 포함
+**/generation/pilot/
+
+# 개별 검증 audit(집계본 report에 포함)
+**/generation/verify/C*.audit.json
+**/generation/verify/_*.json
+
+# 생성 HTML(재생성 가능, 대용량)
+**/generation/report.html

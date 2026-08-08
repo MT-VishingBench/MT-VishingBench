@@ -1,0 +1,213 @@
+{
+  "name": "MT-PhishingBench 보이스피싱 유형 온톨로지 (T1–T9)",
+  "source": "금융당국 공식 분류 (FSI 제공)",
+  "note": "라벨 온톨로지이자 생성 조건변수. axis: primary=사칭정체/시나리오 목표, modus_operandi=수법(직교 태그), laundering=자금흐름(대화 아님, 오버레이/별도 모집대화).",
+  "axes": {
+    "primary": ["T1", "T2", "T3", "T4", "T5", "T7"],
+    "modus_operandi": ["T6", "T8"],
+    "laundering": ["T9"]
+  },
+  "taxonomy": [
+    {
+      "code": "T1", "name": "기관사칭형 금융사기", "name_en": "Impersonation Fraud", "axis": "primary",
+      "children": [
+        {"code": "T1.1", "name": "수사기관 사칭", "children": [
+          {"code": "T1.1.1", "name": "검찰 사칭", "examples": ["검찰청 사칭", "대검찰청 사칭", "서울중앙지검 사칭", "공소장 접수", "범죄계좌 연루"]},
+          {"code": "T1.1.2", "name": "경찰 사칭", "examples": ["경찰청 사칭", "경찰서 사칭", "사건연루 조사", "압류통장"]},
+          {"code": "T1.1.3", "name": "법원 사칭", "examples": ["법원 사칭", "벌금 납부", "사건 처리비"]}
+        ]},
+        {"code": "T1.2", "name": "금융당국 사칭", "children": [
+          {"code": "T1.2.1", "name": "금융감독원 사칭", "examples": ["금감원 사칭", "금융감독원 사칭", "자산보호 명목"]},
+          {"code": "T1.2.2", "name": "금융정보분석원(FIU) 사칭", "examples": ["금융정보분석원 사칭", "자금조사 명목"]}
+        ]},
+        {"code": "T1.3", "name": "공공기관 사칭", "children": [
+          {"code": "T1.3.1", "name": "정부기관 사칭", "examples": ["소상공인진흥공단", "정책자금", "지원금"]},
+          {"code": "T1.3.2", "name": "신용회복기관 사칭", "examples": ["신용회복위원회", "서민금융진흥원"]}
+        ]}
+      ]
+    },
+    {
+      "code": "T2", "name": "금융기관 사칭형 사기", "axis": "primary",
+      "children": [
+        {"code": "T2.1", "name": "은행 사칭", "children": [
+          {"code": "T2.1.1", "name": "시중은행 사칭", "examples": ["국민은행", "신한은행", "우리은행", "하나은행", "농협은행"]},
+          {"code": "T2.1.2", "name": "인터넷은행 사칭", "examples": ["카카오뱅크", "케이뱅크", "토스뱅크"]}
+        ]},
+        {"code": "T2.2", "name": "저축은행 사칭", "children": [
+          {"code": "T2.2.1", "name": "SBI저축은행"},
+          {"code": "T2.2.2", "name": "OK저축은행"},
+          {"code": "T2.2.3", "name": "신한저축은행"},
+          {"code": "T2.2.4", "name": "하나저축은행"}
+        ]},
+        {"code": "T2.3", "name": "캐피탈 사칭", "children": [
+          {"code": "T2.3.1", "name": "KB캐피탈"},
+          {"code": "T2.3.2", "name": "현대캐피탈"},
+          {"code": "T2.3.3", "name": "하나캐피탈"},
+          {"code": "T2.3.4", "name": "메리츠캐피탈"}
+        ]},
+        {"code": "T2.4", "name": "카드사 사칭", "children": [
+          {"code": "T2.4.1", "name": "카드배송 사칭"},
+          {"code": "T2.4.2", "name": "카드오배송 사칭"},
+          {"code": "T2.4.3", "name": "카드발급 사칭"}
+        ]}
+      ]
+    },
+    {
+      "code": "T3", "name": "대출사기", "axis": "primary",
+      "children": [
+        {"code": "T3.1", "name": "신용등급 조작형", "children": [
+          {"code": "T3.1.1", "name": "신용등급 상향"},
+          {"code": "T3.1.2", "name": "신용점수 복구"}
+        ]},
+        {"code": "T3.2", "name": "거래실적 생성형", "children": [
+          {"code": "T3.2.1", "name": "거래실적 요구"},
+          {"code": "T3.2.2", "name": "거래내역 생성"},
+          {"code": "T3.2.3", "name": "테스트 송금"}
+        ]},
+        {"code": "T3.3", "name": "대환대출 사기", "children": [
+          {"code": "T3.3.1", "name": "기존 대출 상환 유도"},
+          {"code": "T3.3.2", "name": "선입금 요구"},
+          {"code": "T3.3.3", "name": "보증금 요구"}
+        ]}
+      ]
+    },
+    {
+      "code": "T4", "name": "가족·지인 사칭형", "axis": "primary",
+      "children": [
+        {"code": "T4.1", "name": "가족 사칭", "children": [
+          {"code": "T4.1.1", "name": "자녀 사칭", "children": [
+            {"code": "T4.1.1.1", "name": "자녀 납치"},
+            {"code": "T4.1.1.2", "name": "자녀 사고"},
+            {"code": "T4.1.1.3", "name": "자녀 치료비"}
+          ]},
+          {"code": "T4.1.2", "name": "아들 사칭"},
+          {"code": "T4.1.3", "name": "동생 사칭"}
+        ]},
+        {"code": "T4.2", "name": "지인 사칭", "children": [
+          {"code": "T4.2.1", "name": "친구 사칭"},
+          {"code": "T4.2.2", "name": "직장동료 사칭"},
+          {"code": "T4.2.3", "name": "학교후배 사칭"}
+        ]},
+        {"code": "T4.3", "name": "메신저 피싱", "children": [
+          {"code": "T4.3.1", "name": "카카오톡"},
+          {"code": "T4.3.2", "name": "라인"},
+          {"code": "T4.3.3", "name": "텔레그램"},
+          {"code": "T4.3.4", "name": "문자메시지"}
+        ]}
+      ]
+    },
+    {
+      "code": "T5", "name": "투자사기", "axis": "primary",
+      "children": [
+        {"code": "T5.1", "name": "주식 투자사기", "children": [
+          {"code": "T5.1.1", "name": "리딩방", "children": [
+            {"code": "T5.1.1.1", "name": "카카오톡 리딩방"},
+            {"code": "T5.1.1.2", "name": "텔레그램 리딩방"},
+            {"code": "T5.1.1.3", "name": "밴드 리딩방"}
+          ]},
+          {"code": "T5.1.2", "name": "허위 전문가", "children": [
+            {"code": "T5.1.2.1", "name": "애널리스트 사칭"},
+            {"code": "T5.1.2.2", "name": "펀드매니저 사칭"}
+          ]}
+        ]},
+        {"code": "T5.2", "name": "가상자산 투자사기", "children": [
+          {"code": "T5.2.1", "name": "코인 투자", "children": [
+            {"code": "T5.2.1.1", "name": "비트코인"},
+            {"code": "T5.2.1.2", "name": "이더리움"},
+            {"code": "T5.2.1.3", "name": "파이코인"}
+          ]},
+          {"code": "T5.2.2", "name": "가짜 거래소", "children": [
+            {"code": "T5.2.2.1", "name": "출금수수료 요구"},
+            {"code": "T5.2.2.2", "name": "환전수수료 요구"}
+          ]}
+        ]},
+        {"code": "T5.3", "name": "해외선물 투자사기", "children": [
+          {"code": "T5.3.1", "name": "해외선물"},
+          {"code": "T5.3.2", "name": "FX 거래"}
+        ]}
+      ]
+    },
+    {
+      "code": "T6", "name": "전자금융사기", "axis": "modus_operandi",
+      "children": [
+        {"code": "T6.1", "name": "개인정보 탈취", "children": [
+          {"code": "T6.1.1", "name": "개인정보 유출"},
+          {"code": "T6.1.2", "name": "명의도용"},
+          {"code": "T6.1.3", "name": "휴대폰 분실"}
+        ]},
+        {"code": "T6.2", "name": "악성앱 기반 사기", "children": [
+          {"code": "T6.2.1", "name": "원격제어앱 설치"},
+          {"code": "T6.2.2", "name": "악성앱 설치"},
+          {"code": "T6.2.3", "name": "오픈뱅킹 탈취"}
+        ]},
+        {"code": "T6.3", "name": "스미싱", "children": [
+          {"code": "T6.3.1", "name": "카드배송 스미싱"},
+          {"code": "T6.3.2", "name": "택배 스미싱"},
+          {"code": "T6.3.3", "name": "정부지원금 스미싱"}
+        ]}
+      ]
+    },
+    {
+      "code": "T7", "name": "일반 사기", "axis": "primary",
+      "children": [
+        {"code": "T7.1", "name": "물품사기", "children": [
+          {"code": "T7.1.1", "name": "중고거래"},
+          {"code": "T7.1.2", "name": "쇼핑몰 사기"},
+          {"code": "T7.1.3", "name": "구매대행 사기"}
+        ]},
+        {"code": "T7.2", "name": "노쇼 사기", "children": [
+          {"code": "T7.2.1", "name": "군부대 물품구매"},
+          {"code": "T7.2.2", "name": "단체예약"}
+        ]},
+        {"code": "T7.3", "name": "로맨스 스캠", "children": [
+          {"code": "T7.3.1", "name": "연애관계 형성"},
+          {"code": "T7.3.2", "name": "해외송금 요구"}
+        ]}
+      ]
+    },
+    {
+      "code": "T8", "name": "불법금융 및 범죄수익", "axis": "modus_operandi",
+      "children": [
+        {"code": "T8.1", "name": "도박", "children": [
+          {"code": "T8.1.1", "name": "온라인 도박"},
+          {"code": "T8.1.2", "name": "스포츠토토"},
+          {"code": "T8.1.3", "name": "카지노"}
+        ]},
+        {"code": "T8.2", "name": "대포통장", "children": [
+          {"code": "T8.2.1", "name": "통장양도"},
+          {"code": "T8.2.2", "name": "통장대여"},
+          {"code": "T8.2.3", "name": "명의대여"}
+        ]},
+        {"code": "T8.3", "name": "상품권 세탁", "children": [
+          {"code": "T8.3.1", "name": "상품권 구매"},
+          {"code": "T8.3.2", "name": "상품권 현금화"}
+        ]}
+      ]
+    },
+    {
+      "code": "T9", "name": "자금세탁", "name_en": "Money Laundering", "axis": "laundering",
+      "note": "피해자-공격자 통화가 아님. T1–T8 대화의 송금지시에 오버레이 라벨로 부착하거나, 대포통장·인출책 모집 대화로 별도 생성.",
+      "children": [
+        {"code": "T9.1", "name": "수집계좌", "name_en": "Collection Account", "children": [
+          {"code": "T9.1.1", "name": "다수 개인 수취"},
+          {"code": "T9.1.2", "name": "다수 피해금 수취"}
+        ]},
+        {"code": "T9.2", "name": "분산계좌", "name_en": "Layering", "children": [
+          {"code": "T9.2.1", "name": "개인→개인 분산"},
+          {"code": "T9.2.2", "name": "다수계좌 분산"},
+          {"code": "T9.2.3", "name": "타행 재이체"}
+        ]},
+        {"code": "T9.3", "name": "현금화", "children": [
+          {"code": "T9.3.1", "name": "ATM 인출"},
+          {"code": "T9.3.2", "name": "현금입금 후 인출"},
+          {"code": "T9.3.3", "name": "인출책"}
+        ]},
+        {"code": "T9.4", "name": "해외세탁", "children": [
+          {"code": "T9.4.1", "name": "해외송금"},
+          {"code": "T9.4.2", "name": "외국인 계좌"},
+          {"code": "T9.4.3", "name": "가상자산 전환"}
+        ]}
+      ]
+    }
+  ]
+}

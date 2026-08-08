@@ -1,0 +1,16 @@
+{
+  "n": 2000,
+  "summary": {
+    "bad_speaker": 0,
+    "bad_stage": 0,
+    "unknown_technique": 0,
+    "empty_text": 0,
+    "stage_out_of_order": 0,
+    "success_no_extraction": 0,
+    "blocked_reached_extraction": 0,
+    "success_no_intervention": 0,
+    "ip_wrong_stage": 0,
+    "no_attacker_or_victim": 0
+  },
+  "examples": {}
+}

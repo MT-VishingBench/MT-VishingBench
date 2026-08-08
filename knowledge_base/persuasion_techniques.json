@@ -1,0 +1,27 @@
+{
+  "name": "설득·사회공학 기법 라벨 스킴",
+  "note": "발화 단위 라벨. Ferreira et al.(2015) 통합 5원리를 base로, 한국 보이스피싱 특유 전술을 확장. Cialdini(6원리)·Stajano-Wilson(CACM 2011, 7원리) 매핑 포함.",
+  "techniques": [
+    {"code": "authority", "name": "권위", "base": "Ferreira:Authority / Cialdini:Authority",
+     "desc": "기관·직위·사건번호·공문으로 권위를 내세워 복종 유도",
+     "signals": ["저는 ○○지검 ○○수사관입니다", "사건번호", "공문/소환장 발송", "법적 처벌 고지"]},
+    {"code": "urgency", "name": "긴급성", "base": "Cialdini:Scarcity / Stajano:Time",
+     "desc": "한정된 시간·즉시 행동 압박으로 숙고를 차단",
+     "signals": ["지금 바로", "오늘 안에", "시간이 없다", "마감/만기 임박"]},
+    {"code": "fear", "name": "공포", "base": "한국형 확장(coercion) / Stajano:Need-and-greed의 역",
+     "desc": "구속·명의도용·공범 의심 등 위협으로 불안 조성",
+     "signals": ["구속될 수 있다", "공범으로 처벌", "계좌 동결", "범죄 연루"]},
+    {"code": "isolation", "name": "고립", "base": "한국형 확장 / Stajano:Distraction·Social-compliance",
+     "desc": "가족·지인·은행 직원과의 접촉 차단('비대면 수사', 비밀유지)으로 외부 검증 봉쇄",
+     "signals": ["제3자에게 말하면 안 된다", "수사 비밀", "조용한 곳으로 이동", "은행 직원에게 용도 말하지 말라"]},
+    {"code": "rapport", "name": "신뢰형성", "base": "Ferreira:Liking/Similarity / Cialdini:Liking·Reciprocity",
+     "desc": "호의·도움·친근감으로 신뢰를 쌓아 경계 완화(빚진 느낌 유도)",
+     "signals": ["도와드리려고", "걱정 마세요", "친절한 안내", "당신 편이다"]},
+    {"code": "commitment", "name": "순응유도", "base": "Cialdini:Commitment/Consistency / foot-in-the-door",
+     "desc": "소액·간단한 요구부터 단계적으로 큰 행동(앱설치·인증번호·송금)으로 확대",
+     "signals": ["우선 ○○만 해보세요", "인증번호 불러주세요", "앱 하나만 설치", "동의하시죠?(반복 확인)"]},
+    {"code": "social_proof", "name": "사회적증거", "base": "Ferreira/Cialdini:Social Proof / Stajano:Herd",
+     "desc": "타인의 사례·다수 피해자 언급으로 정당성·정상성 부여",
+     "signals": ["다른 분들도 이렇게 처리", "보통 이런 경우", "백여 명이 연루"]}
+  ]
+}
